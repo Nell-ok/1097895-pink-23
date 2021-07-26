@@ -147,8 +147,9 @@
       </div>
     </section>
     <section class="catalog-form">
+      <h2 class="visually-hidden">Редактор фото</h2>
       <div class="catalog-form__wrapper">
-        <h2 class="catalog-form__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
+        <p class="catalog-form__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         <form class="catalog-form__form form-range" method="GET" action="https://echo.htmlacademy.ru">
           <fieldset class="form-range__picture">
             <legend class="visually-hidden">Картинка</legend>
@@ -157,9 +158,32 @@
           </fieldset>
           <fieldset class="form-range__filter">
             <legend class="visually-hidden">Настройки фото</legend>
-            <input class="form-range__range" type="range" name="filter">
-            <input class="form-range__range" type="range" name="filter">
-            <input class="form-range__range" type="range" name="filter">
+            <label class="form-range__icon form-range__icon--current" for="icon-range-one">
+              <svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity=".3" fill="#283645">
+                  <path d="M32 28h4V12a4 4 0 00-4-4H16v4h16v16zm-20 4V0H8v8H0v4h8v20a4 4 0 004 4h20v8h4v-8h8v-4H12z" />
+                </g>
+              </svg>
+            </label>
+            <label class="form-range__icon" for="icon-range-two">
+              <svg width="48" height="43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity=".3" fill="#283645">
+                  <path
+                    d="M33.12 17.88L15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 000 4.24l11 11a3 3 0 004.24 0l11-11a3 3 0 000-4.24zM10.41 20L20 10.42 29.59 20H10.41zM38 23s-4 4.33-4 7a4 4 0 108 0c0-2.67-4-7-4-7zM48 40H0v3h48v-3z" />
+                </g>
+              </svg>
+            </label>
+            <label class="form-range__icon" for="icon-range-three">
+              <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity=".3" fill="#283645">
+                  <path
+                    d="M16 4a12 12 0 110 24 12 12 0 010-24zm0-4a16 16 0 100 32 16 16 0 000-32zM16 24.29a8.52 8.52 0 000-17" />
+                </g>
+              </svg>
+            </label>
+            <input class="form-range__range" id="icon-range-one" type="range" name="filter">
+            <input class="form-range__range" id="icon-range-two" type="range" name="filter">
+            <input class="form-range__range" id="icon-range-three" type="range" name="filter">
           </fieldset>
           <div class="form-range__wrapper-button">
             <button class="form-range__button form-range__button--download button-link" type="submit">Запостить</button>

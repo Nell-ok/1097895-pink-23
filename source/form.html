@@ -58,35 +58,49 @@
               <li class="fieldset-user__item">
                 <label class="fieldset-user__label" for="user-surname">Фамилия:</label>
                 <input class="fieldset-user__input" id="user-surname" type="text" name="surname"
-                  value="Укажите фамилию *" required>
+                  placeholder="Укажите фамилию *" required>
               </li>
               <li class="fieldset-user__item">
                 <label class="fieldset-user__label" for="user-name">Имя:</label>
-                <input class="fieldset-user__input" id="user-name" type="text" name="name" value="Введите ваше имя *"
-                  required>
+                <input class="fieldset-user__input" id="user-name" type="text" name="name"
+                  placeholder="Введите ваше имя *" required>
               </li>
               <li class="fieldset-user__item">
                 <label class="fieldset-user__label" for="user-patronymic">Отчество:</label>
                 <input class="fieldset-user__input" id="user-patronymic" type="text" name="patronymic"
-                  value="Ну и отчество тоже">
+                  placeholder="Ну и отчество тоже">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="main-form__applications fieldset-applications">
-            <legend class="fieldset-applications__title fieldset-title">С каким приложением путешествовали?</legend>
-            <ul class="fieldset-applications__list">
-              <li class="fieldset-applications__item">
-                <input class="fieldset-applications__input fieldset-applications__input--checked" id="pink-for-ios"
-                  type="radio" name="for-ios" checked>
-                <label class="fieldset-applications__label" for="pink-for-ios">Pink для iOS</label>
+          <fieldset class="main-form__progress fieldset-progress">
+            <legend class="fieldset-progress__title fieldset-title">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="fieldset-progress__list">
+              <li class="fieldset-progress__item">
+                <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-one" type="checkbox"
+                  name="progress-one" checked>
+                <label class="fieldset-progress__label" for="item-one">Сделал селфи с акулой</label>
               </li>
-              <li class="fieldset-applications__item">
-                <input class="fieldset-applications__input" id="pink-for-android" type="radio" name="for-android">
-                <label class="fieldset-applications__label" for="pink-for-android">Pink на Android</label>
+              <li class="fieldset-progress__item">
+                <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-two" type="checkbox"
+                  name="progress-two" checked>
+                <label class="fieldset-progress__label" for="item-two">Обгорел на пляже</label>
               </li>
-              <li class="fieldset-applications__item">
-                <input class="fieldset-applications__input" id="windows" type="radio" name="for-windows">
-                <label class="fieldset-applications__label" for="windows">Windows Phone</label>
+              <li class="fieldset-progress__item">
+                <input class="fieldset-progress__input" id="item-three" type="checkbox" name="progress-three">
+                <label class="fieldset-progress__label" for="item-three">Видел Чака Норриса</label>
+              </li>
+              <li class="fieldset-progress__item">
+                <input class="fieldset-progress__input" id="item-four" type="checkbox" name="progress-four">
+                <label class="fieldset-progress__label" for="item-four">Накупил сувениров</label>
+              </li>
+              <li class="fieldset-progress__item">
+                <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-five" type="checkbox"
+                  name="progress-five" checked>
+                <label class="fieldset-progress__label" for="item-five">Удержал башню</label>
+              </li>
+              <li class="fieldset-progress__item">
+                <input class="fieldset-progress__input" id="item-six" type="checkbox" name="progress-six">
+                <label class="fieldset-progress__label" for="item-six">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
@@ -96,44 +110,32 @@
               <li class="fieldset-contacts__item">
                 <label class="fieldset-contacts__label" for="user-phone">Номер телефона</label>
                 <input class="fieldset-contacts__input" id="user-phone" type="tel" name="phone"
-                  value="Номер, пожалуйста">
+                  placeholder="Номер, пожалуйста">
               </li>
               <li class="fieldset-contacts__item">
                 <label class="fieldset-contacts__label" for="user-email">Адрес почты</label>
                 <input class="fieldset-contacts__input" id="user-email" type="email" name="email"
-                  value="Введите почту *" required>
+                  placeholder="Введите почту *" required>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="main-form__progress fieldset-progress">
-            <legend class="fieldset-progress__title fieldset-title">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="fieldset-progress__list">
-              <li class="fieldset-progress__item">
-                <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-one" type="checkbox"
-                  name="item-progress" checked>
-                <label class="fieldset-progress__label" for="item-one">Сделал селфи с акулой</label>
+          <fieldset class="main-form__applications fieldset-applications">
+            <legend class="fieldset-applications__title fieldset-title">С каким приложением путешествовали?</legend>
+            <ul class="fieldset-applications__list">
+              <li class="fieldset-applications__item">
+                <input class="fieldset-applications__input fieldset-applications__input--checked" id="pink-for-ios"
+                  type="radio" name="item-radio" value="for-ios" checked>
+                <label class="fieldset-applications__label" for="pink-for-ios">Pink для iOS</label>
               </li>
-              <li class="fieldset-progress__item">
-                <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-two" type="checkbox"
-                  name="item-progress" checked>
-                <label class="fieldset-progress__label" for="item-two">Обгорел на пляже</label>
+              <li class="fieldset-applications__item">
+                <input class="fieldset-applications__input" id="pink-for-android" type="radio" name="item-radio"
+                  value="for-android">
+                <label class="fieldset-applications__label" for="pink-for-android">Pink на Android</label>
               </li>
-              <li class="fieldset-progress__item">
-                <input class="fieldset-progress__input" id="item-three" type="checkbox" name="item-progress">
-                <label class="fieldset-progress__label" for="item-three">Видел Чака Норриса</label>
-              </li>
-              <li class="fieldset-progress__item">
-                <input class="fieldset-progress__input" id="item-four" type="checkbox" name="item-progress">
-                <label class="fieldset-progress__label" for="item-four">Накупил сувениров</label>
-              </li>
-              <li class="fieldset-progress__item">
-                <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-five" type="checkbox"
-                  name="item-progress" checked>
-                <label class="fieldset-progress__label" for="item-five">Удержал башню</label>
-              </li>
-              <li class="fieldset-progress__item">
-                <input class="fieldset-progress__input" id="item-six" type="checkbox" name="item-progress">
-                <label class="fieldset-progress__label" for="item-six">Разгромил отель</label>
+              <li class="fieldset-applications__item">
+                <input class="fieldset-applications__input" id="windows" type="radio" name="item-radio"
+                  value="for-windows">
+                <label class="fieldset-applications__label" for="windows">Windows Phone</label>
               </li>
             </ul>
           </fieldset>
