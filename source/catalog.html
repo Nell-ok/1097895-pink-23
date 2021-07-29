@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Каталог - Пинк</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -25,18 +26,18 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Фотографии</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
-            <a href="#">Html academy</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Html academy</a>
           </li>
         </ul>
       </div>
@@ -44,7 +45,7 @@
   </header>
   <main class="main-catalog">
     <section class="page-title page-title--catalog">
-      <h1 class="page-title__heading">Фотографии пользователей</h1>
+      <h1 class="page-title__heading">Фотографии<br>пользователей</h1>
     </section>
     <section class="photo-blog">
       <div class="photo-blog__wrapper">
@@ -54,7 +55,7 @@
           <h3 class="visually-hidden">Панорамный пост</h3>
           <a class="post__link" href="#"><img class="post__picture" src="img/photo_blog/mobile_photo_panorama.jpg"
               width="320" height="137" alt="Мост в горах"></a>
-          <div class="post__wrapper">
+          <div class="post__wrapper post__wrapper--panorama">
             <b class="post__author">Анна</b><span class="post__note">(5 минут назад)</span>
             <p class="post__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в
               перископе, задавайте свои вопросы!</p>
