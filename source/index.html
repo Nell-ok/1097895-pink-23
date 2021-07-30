@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -25,18 +26,18 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="#">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Фотографии</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
-            <a href="#">Html academy</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Html academy</a>
           </li>
         </ul>
       </div>
@@ -69,7 +70,7 @@
             </a>
           </li>
         </ul>
-        <p class="downloadblock__text">Доступно для iPhone, iPad, Android,<br>Windows Phone, OS X, Windows 8</p>
+        <p class="downloadblock__desc">Доступно для iPhone, iPad, Android,<br>Windows Phone, OS X, Windows 8</p>
       </div>
     </section>
     <section class="features">
@@ -117,10 +118,10 @@
             <p class="reviews__author-info">25 лет, водитель трамвая</p>
           </blockquote>
         </div>
-        <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--current" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+        <p class="reviews__toggles toggles">
+          <button class="toggles__button toggles__button--current" type="button">1</button>
+          <button class="toggles__button" type="button">2</button>
+          <button class="toggles__button" type="button">3</button>
         </p>
       </div>
     </section>
@@ -128,71 +129,71 @@
       <div class="tariffs__wrapper">
         <h2 class="visually-hidden">Тарифы приложения PINK</h2>
         <table class="tariffs__table table">
-          <tr class="table__row-1">
-            <th class="table__cell-1"></th>
-            <th class="table__cell-2">
+          <tr class="table__row-title">
+            <th class="table__cell-title table__cell-title--hidden"></th>
+            <th class="table__cell-title">
               <span class="table__tariffs-name">База</span>
               <span class="table__tariffs-price">1,99 USD</span>
             </th>
-            <th class="table__cell-3">
+            <th class="table__cell-title table__cell-title--special">
               <span class="table__tariffs-name">Стандарт</span>
               <span class="table__tariffs-price">3,99 USD</span>
             </th>
-            <th class="table__cell-4">
+            <th class="table__cell-title">
               <span class="table__tariffs-name">Анлим</span>
               <span class="table__tariffs-price">9,99 USD</span>
             </th>
           </tr>
-          <tr class="table__row-2">
-            <td class="table__cell-1">Розовый фильтр</td>
-            <td class="table__cell-2">
+          <tr class="table__row">
+            <td class="table__cell">Розовый фильтр</td>
+            <td class="table__cell">
               <span class="table__option-name">Розовый фильтр</span>
               <span class="table__icon icon-yes">да</span>
             </td>
-            <td class="table__cell-3">
+            <td class="table__cell">
               <span class="table__option-name">Розовый фильтр</span>
               <span class="table__icon icon-yes">да</span>
             </td>
-            <td class="table__cell-4">
+            <td class="table__cell">
               <span class="table__option-name">Розовый фильтр</span>
               <span class="table__icon icon-yes">да</span>
             </td>
           </tr>
-          <tr class="table__row-3">
-            <td class="table__cell-1">Смайлики</td>
-            <td class="table__cell-2">
+          <tr class="table__row">
+            <td class="table__cell">Смайлики</td>
+            <td class="table__cell">
               <span class="table__option-name">Смайлики</span>
               <span class="table__icon icon-no">нет</span>
             </td>
-            <td class="table__cell-3">
+            <td class="table__cell">
               <span class="table__option-name">Смайлики</span>
               <span class="table__icon icon-yes">да</span>
             </td>
-            <td class="table__cell-4">
+            <td class="table__cell">
               <span class="table__option-name">Смайлики</span>
               <span class="table__icon icon-yes">да</span>
             </td>
           </tr>
-          <tr class="table__row-4">
-            <td class="table__cell-1">Комментарии</td>
-            <td class="table__cell-2">
+          <tr class="table__row">
+            <td class="table__cell">Комментарии</td>
+            <td class="table__cell">
               <span class="table__option-name">Комментарии</span>
               <span class="table__icon icon-no">нет</span>
             </td>
-            <td class="table__cell-3">
+            <td class="table__cell">
               <span class="table__option-name">Комментарии</span>
               <span class="table__icon icon-no">нет</span>
             </td>
-            <td class="table__cell-4">
+            <td class="table__cell">
               <span class="table__option-name">Комментарии</span>
               <span class="table__icon icon-yes">да</span>
             </td>
           </tr>
         </table>
-        <p class="tariffs__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle slider__toggle--current" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+        <p class="tariffs__toggles toggles">
+          <button class="toggles__button" type="button">1</button>
+          <button class="toggles__button toggles__button--current" type="button">2</button>
+          <button class="toggles__button" type="button">3</button>
         </p>
       </div>
     </section>
@@ -203,15 +204,15 @@
           <ul class="contacts__list">
             <li class="contacts__item">
               <h3 class="contacts__title">Звоните:</h3>
-              <a class="contacts__phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
+              <a class="contacts__link contacts__link--phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
             </li>
             <li class="contacts__item">
               <h3 class="contacts__title">Пишите:</h3>
-              <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item">
               <h3 class="contacts__title">Приезжайте в гости:</h3>
-              <address class="contacts__address">ул. Большая<br>Конюшенная, 19/8</address>
+              <address class="contacts__link contacts__link--address">ул. Большая<br>Конюшенная, 19/8</address>
             </li>
           </ul>
         </div>

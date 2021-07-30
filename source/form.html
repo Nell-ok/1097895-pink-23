@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Страница с формами - Пинк</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -25,24 +26,24 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Фотографии</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
-            <a href="#">Html academy</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Html academy</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-  <main class="main-form">
+  <main class="main-forms">
     <section class="page-title">
       <h1 class="page-title__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </section>
@@ -141,10 +142,9 @@
           </fieldset>
           <fieldset class="main-form__desc fieldset-desc">
             <legend class="fieldset-desc__title fieldset-title">Опишите свои эмоции</legend>
-            <label class="visually-hidden">Отзыв о путешествии с приложением PINK
-              <textarea class="fieldset-desc__text" name="text"
-                placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </label>
+            <label class="visually-hidden" for="big-text">Отзыв о путешествии с приложением PINK</label>
+            <textarea class="fieldset-desc__text" id="big-text" name="text"
+              placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <button class="main-form__button button" type="submit">Отправить форму</button>
           <p class="main-form__note"><span class="main-form__note main-form__note--feature">*</span> — обязательные поля
