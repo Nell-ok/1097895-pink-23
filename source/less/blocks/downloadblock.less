@@ -4,11 +4,47 @@
   font-weight: 300;
   background: url("../../img/background/hand-mobile.png") no-repeat center bottom, url("../../img/background/background-mobile.jpg") no-repeat center;
   background-color: @background-dark;
+  padding: 29px 20px 38px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 102px;
+    padding-bottom: 119px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 114px 130px 130px;
+  }
+}
+
+.downloadblock__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 320px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 636px;
+  }
 }
 
 .downloadblock__text {
   font-size: 24px;
   line-height: 120%;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .downloadblock__button {
@@ -16,13 +52,40 @@
   border: 3px solid @basic-white;
   padding: 15px 35px;
   background-color: transparent;
+  margin-top: 348px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 39px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 51px;
+    margin-bottom: 67px;
+  }
 }
 
 .downloadblock__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .downloadblock__desc {
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
+  padding-top: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 38px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 58px;
+  }
 }

@@ -1,3 +1,21 @@
 .page-header {
   background-color: @basic-dark;
 }
+
+.page-header__wrapper {
+  padding: 23px 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+    padding-bottom: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+    padding-right: 130px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
