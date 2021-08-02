@@ -42,9 +42,28 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  @media (min-width: @tablet-width) {
+  /*@media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-around;
+  }*/
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+.contacts__item--address {
+  @media (min-width: @tablet-width) {
+    grid-column: ~"1 / -1";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"2 / 3";
   }
 }
 
