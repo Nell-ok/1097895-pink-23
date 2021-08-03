@@ -1,10 +1,31 @@
 .tariffs {
-  background: url("../../img/background/background-grey-table.png") no-repeat center bottom;
-  min-height: 506px;
+  background-color: @basic-gray;
   text-align: center;
   text-transform: uppercase;
 }
 
+.tariffs__wrapper {
+  padding: 127px 0 100px;
+  width: 320px;
+  min-width: 100%;
+  overflow-x: hidden;
+
+  @media (min-width: @tablet-width) {
+    padding: 114px 20 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 159px 130 98px;
+  }
+}
+
 .tariffs__table {
   margin: auto;
+  width: auto;
+}
+
+.tariffs__toggles {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
