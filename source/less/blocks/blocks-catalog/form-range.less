@@ -1,9 +1,67 @@
+.form-range {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .form-range__picture {
   border: none;
+  margin: 0;
+  padding: 20px;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 57px 0 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 57px;
+    padding-left: 20px;
+  }
+}
+
+.form-range__picture-img {
+  display: block;
 }
 
 .form-range__filter {
   border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-around;
+  }
+}
+
+.form-range__wrapper-range {
+  padding: 20px 20px 27px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.form-range__icon-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
 }
 
 .form-range__icon--current path {
@@ -14,9 +72,43 @@
   opacity: 1;
 }
 
+.form-range__input-wrapper {
+  padding: 34px 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+
+.form-range__range--hidden {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.form-range__wrapper-button {
+  padding: 38px 20px 41px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
 .form-range__button {
   background-color: transparent;
-  padding: 15px 35px;
+  padding: 15px 10px;
 }
 
 .form-range__button--download {
@@ -25,7 +117,17 @@
 }
 
 .form-range__button--cancel {
+  margin-top: 12px;
   color: @basic-dark;
   border: 3px solid @basic-dark;
   opacity: 0.1;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 44px;
+  }
 }

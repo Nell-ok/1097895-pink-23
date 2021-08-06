@@ -1,7 +1,145 @@
-.main-form__note {
-  text-transform: uppercase;
+.main-form {
+  display: grid;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.main-form__note--feature {
+.main-form__user {
+  padding: 0 20px 44px 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 74px 0 130px;
+  }
+}
+
+.main-form__progress-wrapper {
+  padding: 0 20px;
+  background-color: @basic-gray;
+
+  @media (min-width: @tablet-width) {
+    grid-row: ~"4 / 5";
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: ~"3 / 4";
+    grid-column: ~"1 / -1";
+    padding: 0 130px;
+  }
+}
+
+.main-form__applications-wrapper {
+  padding: 0 20px;
+  background-color: @basic-gray;
+
+  @media (min-width: @tablet-width) {
+    grid-row: ~"2 / 3";
+    grid-column: ~"2 / -1";
+    background-color: @basic-white;
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: ~"1 / 2";
+    padding: 0 130px 34px 0;
+  }
+}
+
+.main-form__contacts,
+.main-form__desc,
+.main-form__button-wrapper {
+  @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -1";
+  }
+}
+
+.main-form__progress,
+.main-form__applications {
+  padding: 83px 0 55px;
+}
+
+.main-form__applications {
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.main-form__progress {
+  @media (min-width: @desktop-width) {
+    padding: 39px 60px 57px;
+  }
+}
+
+.main-form__contacts {
+  padding: 10px 20px 44px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 60px;
+    padding-left: 60px;
+    margin: 0 20px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 15px;
+    margin: 20px 130px 54px;
+  }
+}
+
+.main-form__desc {
+  padding: 50px 20px 52px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 20px;
+    padding: 30px 60px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 54px 130px 0;
+  }
+}
+
+.main-form__button-wrapper {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px 20px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 70px 130px 50px;
+  }
+}
+
+.main-form__note {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 36px 0 16px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.main-form__note-feature {
   color: @basic-pink;
+}
+
+.main-form__note-hidden {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }

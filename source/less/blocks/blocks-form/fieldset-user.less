@@ -1,25 +1,56 @@
 .fieldset-user {
   border: none;
   margin: 0;
-  padding: 55px 20px 44px 20px;
 }
 
 .fieldset-user__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.fieldset-user__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 20px;
+    align-items: center;
+    padding-top: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 51px;
+  }
+}
+
+.fieldset-user__item:first-of-type {
+  @media (min-width: @desktop-width) {
+    padding-top: 21px;
+  }
 }
 
 .fieldset-user__label {
   color: @basic-pink;
   text-transform: uppercase;
   padding-left: 23px;
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .fieldset-user__input {
   color: @basic-dark;
   font-size: 18px;
-  padding: 23px 10px 23px 20px;
+  padding: 20px 10px 20px 20px;
   border: 2px solid @basic-border;
   background-color: transparent;
 }
