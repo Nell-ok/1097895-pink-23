@@ -1,7 +1,9 @@
 .fieldset-desc {
   border: none;
-  margin: 0;
-  padding: 42px 20px 52px 20px;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @basic-border;
+  }
 }
 
 .fieldset-desc__title {
@@ -9,13 +11,21 @@
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  top: 35px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 30px;
+    position: static;
+    padding: 0 38px;
+  }
 }
 
 .fieldset-desc__text {
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
-  padding: 22px 25px 132px 20px;
+  padding: 15px 10px 0 22px;
   border: 2px solid @basic-border;
   background-color: transparent;
 }

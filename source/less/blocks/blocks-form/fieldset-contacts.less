@@ -1,31 +1,73 @@
 .fieldset-contacts {
   border: none;
-  margin: 0;
-  padding: 42px 20px 44px 20px;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @basic-border;
+  }
 }
 
 .fieldset-contacts__title {
   color: @basic-pink;
   text-transform: uppercase;
   text-align: center;
+  line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 31px;
+  }
+}
+
+.fieldset-contacts__title--hidden {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
 
 .fieldset-contacts__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 74px;
+  }
+}
+
+.fieldset-contacts__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+  }
 }
 
 .fieldset-contacts__label {
   color: @basic-pink;
   text-transform: uppercase;
   padding-left: 23px;
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    padding-top: 12px;
+  }
 }
 
 .fieldset-contacts__input {
   color: @basic-dark;
   font-size: 18px;
-  padding: 23px 10px 23px 20px;
+  padding: 20px 10px 20px 20px;
   border: 2px solid @basic-border;
   background-color: transparent;
 }

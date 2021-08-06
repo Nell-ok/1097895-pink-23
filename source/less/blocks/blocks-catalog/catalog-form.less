@@ -2,8 +2,36 @@
   text-align: center;
 }
 
+.catalog-form__wrapper {
+  display: grid;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px;
+  }
+}
+
+.catalog-form__text {
+  margin: 0;
+  padding: 39px 20px 42px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding: 64px 20px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 58px 10px 67px;
+  }
+}
+
 .catalog-form__form {
   background-color: @basic-gray;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 60px;
+  }
 }

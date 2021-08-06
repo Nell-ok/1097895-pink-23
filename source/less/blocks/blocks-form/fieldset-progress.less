@@ -1,8 +1,10 @@
 .fieldset-progress {
   border: none;
-  background-color: @basic-gray;
   margin: 0;
-  padding: 42px 20px 44px 20px;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @basic-border;
+  }
 }
 
 .fieldset-progress__title {
@@ -10,12 +12,55 @@
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  top: 42px;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    line-height: 30px;
+    padding: 0 31px;
+  }
 }
 
 .fieldset-progress__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.fieldset-progress__item:not(:first-of-type) {
+  padding-top: 59px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.fieldset-progress__item--four {
+  @media (min-width: @desktop-width) {
+    grid-row: ~"2 / 3";
+    grid-column: ~"1 / 2";
+  }
+}
+
+.fieldset-progress__item--five {
+  @media (min-width: @desktop-width) {
+    grid-row: ~"2 / 3";
+    grid-column: ~"2 / 3";
+  }
 }
 
 .fieldset-progress__label {

@@ -1,31 +1,87 @@
 .post {
   line-height: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .post__container-panorama {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+
+.post__link {
+  align-self: center;
+}
+
+.post__picture {
+  display: block;
 }
 
 .post__wrapper {
   background-color: @basic-gray;
+  padding: 25px 17px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    min-height: 155px;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+  }
+}
+
+.post__wrapper-author {
+  margin: 0;
 }
 
 .post__author {
   font-weight: 700;
+  line-height: 24px;
   padding-right: 3px;
+}
+
+.post__text {
+  line-height: 24px;
+  margin: 0;
 }
 
 .post__note {
   font-size: 12px;
   font-weight: 300;
+  line-height: 24px;
   text-transform: uppercase;
+}
+
+.post__wrapper-counter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
 }
 
 .post__counter {
   color: @basic-pink;
   font-size: 12px;
+  line-height: 24px;
   text-transform: uppercase;
+  margin: 0;
+  order: 2;
+  padding-left: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .post__button {
@@ -34,4 +90,34 @@
   background: url("../../../img/photo_blog/heart.svg") no-repeat;
   background-color: transparent;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.post__wrapper--panorama {
+  @media (min-width: @tablet-width) {
+    min-height: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.post__text--panorama {
+  @media (min-width: @tablet-width) {
+    order: 3;
+    grid-column: ~"1 / -1";
+  }
+}
+
+.post__wrapper-counter--panorama {
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.post__counter--panorama {
+  @media (min-width: @tablet-width) {
+    padding-right: 16px;
+  }
 }
