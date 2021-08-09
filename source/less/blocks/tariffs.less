@@ -5,26 +5,36 @@
 }
 
 .tariffs__wrapper {
-  padding: 127px 0 100px;
+  padding-top: 127px;
   width: 320px;
   min-width: 100%;
   overflow-x: hidden;
 
   @media (min-width: @tablet-width) {
-    padding: 114px 20 70px;
+    padding: 114px 0 70px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 159px 130 98px;
+    padding: 159px 0 98px;
   }
 }
 
 .tariffs__table {
   margin: auto;
   width: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 93%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 78%;
+  }
 }
 
 .tariffs__toggles {
+  padding: 42px 0 46px;
+
   @media (min-width: @tablet-width) {
     display: none;
   }

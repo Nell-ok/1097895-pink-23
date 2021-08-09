@@ -2,13 +2,13 @@
   color: @basic-white;
   text-align: center;
   font-weight: 300;
-  background: url("../../img/background/hand-mobile.png") no-repeat center bottom, url("../../img/background/background-mobile.jpg") no-repeat center;
+  background: url("../../img/background/hand-mobile.png") no-repeat center top 39%, url("../../img/background/background-mobile.jpg") no-repeat center top;
   background-color: @background-dark;
-  padding: 29px 20px 38px 20px;
+  padding: 90px 20px 31px 20px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 102px;
-    padding-bottom: 119px;
+    padding-top: 204px;
+    padding-bottom: 113px;
   }
 
   @media (min-width: @desktop-width) {
@@ -49,20 +49,33 @@
 
 .downloadblock__button {
   color: @basic-white;
+  font-size: 18px;
   border: 3px solid @basic-white;
-  padding: 15px 35px;
   background-color: transparent;
   margin-top: 348px;
   margin-bottom: 32px;
+  width: 254px;
+
+  &:hover {
+    color: @basic-pink;
+    background-color: @basic-white;
+  }
+
+  &:active {
+    color: fade(@basic-pink, 30%);
+    background-color: @basic-white;
+  }
 
   @media (min-width: @tablet-width) {
-    margin-top: 39px;
+    margin-top: 30px;
     margin-bottom: 46px;
+    width: 274px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 51px;
     margin-bottom: 67px;
+    font-size: 21px;
   }
 }
 
@@ -72,16 +85,29 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.downloadblock__item:not(:last-of-type) {
+  padding-right: 35px;
+}
+
+.downloadblock__link {
+  display: block;
+}
+
+.downloadblock__icon {
+  display: block;
 }
 
 .downloadblock__desc {
   font-size: 14px;
   line-height: 24px;
   margin: 0;
-  padding-top: 28px;
+  padding-top: 21px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 38px;
+    padding-top: 33px;
     font-size: 18px;
   }
 

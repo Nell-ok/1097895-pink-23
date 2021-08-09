@@ -1,21 +1,35 @@
 .page-header {
   background-color: @basic-dark;
+
+  @media (min-width: @desktop-width) {
+    background-color: fade(@basic-black, 30%);
+  }
 }
 
 .page-header__wrapper {
-  padding: 23px 20px;
   display: flex;
   flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 27px;
-    padding-bottom: 43px;
-  }
 
   @media (min-width: @desktop-width) {
     padding-left: 130px;
     padding-right: 130px;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  padding: 23px 20px 13px;
+
+  &:hover path {
+    fill: @basic-pink;
+  }
+
+  &:active path {
+    fill: fade(@basic-white, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 20px 33px;
   }
 }

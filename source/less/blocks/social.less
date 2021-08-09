@@ -6,3 +6,25 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.social__item:not(:last-of-type) {
+  padding-right: 8px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 5px;
+  }
+}
+
+.social__link svg {
+  display: block;
+}
+
+.social__link {
+  &:hover circle {
+    opacity: 1;
+  }
+
+  &:active path {
+    fill-opacity: 0.3;
+  }
+}
