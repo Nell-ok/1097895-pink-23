@@ -22,37 +22,91 @@
 
 .table__cell-title {
   background-color: @basic-dark;
-}
-
-.table__tariffs-name {
-  display: block;
-  font-size: 16px;
-  padding: 10px 10px 0;
-
-  @media (min-width: @desktop-width) {
-    font-size: 18px;
-    padding-top: 15px;
-  }
-}
-
-.table__tariffs-price {
-  font-size: 18px;
-  font-weight: 300;
-  padding: 0 10px 30px;
+  padding: 10px 10px 30px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 11px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 15px 10px 16px;
+  }
+}
+
+.table__tariffs-name {
+  display: block;
+  font-size: 16px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.table__tariffs-price {
+  font-size: 18px;
+  font-weight: 300;
+
+  @media (min-width: @desktop-width) {
     font-size: 24px;
-    padding-bottom: 16px;
   }
 }
 
 .table__cell-title--special {
   border-left: 2px solid @basic-gray;
   border-right: 2px solid @basic-gray;
+  position: relative;
+
+  &::after {
+    content: "хит";
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: @basic-white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+
+    @media (min-width: @tablet-width) {
+      top: 7px;
+      left: 8px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 14px;
+      left: 14px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 62px;
+    height: 63px;
+    border-width: 26px;
+    border-style: solid;
+    border-color: transparent transparent @basic-pink;
+    transform: rotate(-45deg);
+
+    @media (min-width: @tablet-width) {
+      top: -45px;
+      left: -43px;
+      width: 44px;
+      height: 44px;
+      border-width: 21px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -59px;
+      left: -55px;
+      width: 56px;
+      height: 60px;
+      border-width: 26px;
+    }
+  }
 }
 
 .table__row {
@@ -69,14 +123,18 @@
 
 .table__cell {
   border: 2px solid @basic-border;
-  padding: 19px 20px;
+  padding: 19px 0 19px 20px;
+  min-width: 256px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 14px 0 12px 15px;
+    min-width: 133px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 18px 0 18px 22px;
+    min-width: 207px;
   }
 }
 
@@ -89,5 +147,45 @@
 .table__option-name {
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.table__icon--yes {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 19px;
+  width: 31px;
+  height: 21px;
+  background: url("../../img/yes.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 13px;
+    right: 40%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 20px;
+    right: 43%;
+  }
+}
+
+.table__icon--no {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 21px;
+  width: 27px;
+  height: 27px;
+  background: url("../../img/no.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    right: 40%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 17px;
+    right: 43%;
   }
 }

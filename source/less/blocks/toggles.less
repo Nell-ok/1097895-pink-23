@@ -63,6 +63,20 @@
       background-color: fade(@basic-black, 30%);
       transform: rotate(45deg);
     }
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: fade(@basic-black, 60%);
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: fade(@basic-black, 10%);
+      }
+    }
   }
 }
 
