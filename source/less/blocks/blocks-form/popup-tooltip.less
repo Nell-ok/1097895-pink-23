@@ -1,5 +1,23 @@
 .popup-tooltip {
+  display: none;
   text-align: center;
+  position: fixed;
+  top: 400px;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  margin: auto;
+  background-color: @basic-white;
+  width: 320px;
+  box-shadow: 0 7px 15px @popup-shadow;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+  }
 }
 
 .popup-tooltip__wrapper-text {
@@ -39,6 +57,20 @@
   }
 }
 
+.popup-tooltip__title-hidden {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
 .popup-tooltip__text {
   line-height: 24px;
   margin: 0;
@@ -46,5 +78,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

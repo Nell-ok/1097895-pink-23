@@ -31,12 +31,11 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    padding-left: 119px;
+    padding-left: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 41px;
-    padding-bottom: 57px;
+    padding: 41px 0 57px 74px;
   }
 }
 
@@ -52,4 +51,48 @@
 
 .fieldset-applications__label {
   font-size: 18px;
+  padding-left: 68px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fieldset-applications__input + .fieldset-applications__label {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 37px;
+    height: 37px;
+    border: 2px solid @basic-border;
+    background-color: @basic-white;
+    border-radius: 50%;
+  }
+}
+
+.fieldset-applications__input:checked + .fieldset-applications__label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    background-color: @basic-pink;
+    border-radius: 50%;
+  }
+}
+
+.fieldset-applications__input:hover + .fieldset-applications__label {
+  &::before {
+    border-color: @basic-dark;
+  }
+}
+
+.fieldset-applications__input:active + .fieldset-applications__label {
+  &::before {
+    border-color: @basic-pink;
+  }
 }

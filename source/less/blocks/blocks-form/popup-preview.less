@@ -1,5 +1,23 @@
 .popup-preview {
+  display: none;
   text-align: center;
+  position: fixed;
+  top: 400px;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  margin: auto;
+  background-color: @basic-white;
+  width: 320px;
+  box-shadow: 0 7px 15px @popup-shadow;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+  }
 }
 
 .popup-preview__wrapper-text {
@@ -46,6 +64,19 @@
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.popup-preview__text-hidden {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

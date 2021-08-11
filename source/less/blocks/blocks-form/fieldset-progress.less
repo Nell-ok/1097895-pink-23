@@ -31,13 +31,16 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    padding-left: 117px;
+    padding-left: 60px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 49px;
+    column-gap: 6%;
+    margin-left: 60px;
   }
 }
 
@@ -65,4 +68,47 @@
 
 .fieldset-progress__label {
   font-size: 18px;
+  padding-left: 57px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fieldset-progress__input + .fieldset-progress__label {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid @basic-border;
+    border-radius: 1px;
+    background-color: @basic-white;
+  }
+}
+
+.fieldset-progress__input:checked + .fieldset-progress__label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 9px;
+    width: 22px;
+    height: 16px;
+    background: url("../../../img/tick.svg") no-repeat;
+  }
+}
+
+.fieldset-progress__input:hover + .fieldset-progress__label {
+  &::before {
+    border-color: @basic-dark;
+  }
+}
+
+.fieldset-progress__input:active + .fieldset-progress__label {
+  &::before {
+    border-color: @basic-pink;
+  }
 }

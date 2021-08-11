@@ -9,6 +9,23 @@
   border-radius: 1px;
   padding: 20px 10px;
 
+  &:hover {
+    border-color: @button-green-hover;
+    background-color: @button-green-hover;
+  }
+
+  &:active {
+    border-color: @button-green-hover;
+    background-color: @button-green-hover;
+    color: fade(@basic-white, 30%);
+  }
+
+  &:disabled {
+    border-color: @basic-border;
+    background-color: @basic-border;
+    color: @basic-white;
+  }
+
   @media (min-width: @tablet-width) {
     min-width: 300px;
   }
