@@ -3,8 +3,33 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .copyright__text {
+  margin: 0;
   line-height: 18px;
+  padding: 0 15px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    padding: 0 13px;
+  }
+}
+
+.copyright__link svg {
+  display: block;
+}
+
+.copyright__link {
+  &:hover path {
+    fill: @basic-dark;
+  }
+
+  &:active path {
+    fill: fade(@basic-dark, 30%);
+  }
 }

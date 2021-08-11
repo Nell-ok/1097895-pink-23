@@ -15,11 +15,11 @@
 .article__wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
-    padding: 102px 20px 120px;
+    padding: 54px 20px 50px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 115px 130px 120px;
+    padding: 67px 130px;
   }
 }
 
@@ -55,17 +55,23 @@
   }
 }
 
+.article-title__hidden {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
 .article__description {
   @media (min-width: @tablet-width) {
     line-height: 24px;
     margin: 0;
-    padding: 24px 0;
+    padding: 13px 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
-    padding: 37px 0 47px;
+    padding: 22px 0 31px;
   }
 }
 

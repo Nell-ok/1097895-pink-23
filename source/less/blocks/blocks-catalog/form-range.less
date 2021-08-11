@@ -107,8 +107,17 @@
 }
 
 .form-range__button {
+  font-size: 18px;
   background-color: transparent;
-  padding: 15px 10px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+  }
 }
 
 .form-range__button--download {
