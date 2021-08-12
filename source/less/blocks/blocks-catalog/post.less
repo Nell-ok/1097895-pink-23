@@ -25,7 +25,7 @@
 
 .post__wrapper {
   background-color: @basic-gray;
-  padding: 25px 17px;
+  padding: 25px 10px 25px 17px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -53,6 +53,12 @@
   margin: 0;
 }
 
+.post__text-hidden {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .post__note {
   font-size: 12px;
   font-weight: 300;
@@ -61,11 +67,13 @@
 }
 
 .post__wrapper-counter {
+  padding-top: 11px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
   @media (min-width: @tablet-width) {
+    padding-top: 0;
     justify-content: space-between;
   }
 }

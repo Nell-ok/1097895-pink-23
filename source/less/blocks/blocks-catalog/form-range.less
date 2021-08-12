@@ -38,7 +38,13 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 54px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+    margin-top: 55px;
   }
 }
 
@@ -51,6 +57,44 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     padding: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid fade(@basic-dark, 10%);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 275px;
+      height: 1px;
+      background-color: fade(@basic-dark, 10%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 76px;
+      right: 0;
+      width: 275px;
+      height: 1px;
+      background-color: fade(@basic-dark, 10%);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    border: none;
+
+    &::before {
+      width: 410px;
+      top: 59px;
+    }
+
+    &::after {
+      width: 410px;
+      bottom: 59px;
+    }
   }
 }
 
@@ -72,15 +116,53 @@
   opacity: 1;
 }
 
+.form-range__icon:hover path {
+  fill: @basic-dark;
+}
+
+.form-range__icon:hover g {
+  opacity: 0.5;
+}
+
+.form-range__icon svg {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.form-range__icon:not(:last-of-type) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form-range__icon path {
+  @media (min-width: @tablet-width) {
+    fill: @basic-pink;
+  }
+}
+
+.form-range__icon g {
+  @media (min-width: @tablet-width) {
+    opacity: 1;
+  }
+}
+
 .form-range__input-wrapper {
   padding: 34px 20px 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     justify-content: space-around;
     padding: 0;
+    margin-right: 18px;
   }
 }
 
@@ -90,15 +172,67 @@
   }
 }
 
+// Стили по умолчанию
+
+.form-range__range {
+  appearance: none;
+  width: 240px;
+  height: 2px;
+  background-color: @basic-dark;
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+    margin-left: 15px;
+
+    &:nth-of-type(2) {
+      margin-top: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    margin-left: 44px;
+
+    &:nth-of-type(2) {
+      margin-top: 22px;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.form-range__range::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 2px solid @basic-pink;
+  background-color: @basic-white;
+  border-radius: 50%;
+}
+
+.form-range__range:focus {
+  outline: none;
+}
+
+.form-range__range::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
 .form-range__wrapper-button {
   padding: 38px 20px 41px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid fade(@basic-dark, 10%);
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -123,6 +257,16 @@
 .form-range__button--download {
   color: @basic-pink;
   border: 3px solid @basic-pink;
+
+  &:hover {
+    background-color: @basic-pink;
+    color: @basic-white;
+  }
+
+  &:active {
+    background-color: @basic-pink;
+    color: fade(@basic-white, 30%);
+  }
 }
 
 .form-range__button--cancel {
@@ -130,6 +274,17 @@
   color: @basic-dark;
   border: 3px solid @basic-dark;
   opacity: 0.1;
+
+  &:hover {
+    border-color: fade(@basic-dark, 30%);
+    color: fade(@basic-dark, 30%);
+  }
+
+  &:active {
+    background-color: fade(@basic-dark, 30%);
+    border-color: fade(@basic-dark, 30%);
+    color: fade(@basic-white, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: 24px;

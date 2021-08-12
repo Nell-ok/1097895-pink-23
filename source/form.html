@@ -82,30 +82,33 @@
               <legend class="fieldset-progress__title">Ваши безбашенные достижения в путешествии</legend>
               <ul class="fieldset-progress__list">
                 <li class="fieldset-progress__item">
-                  <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-one"
-                    type="checkbox" name="progress-one" checked>
+                  <input class="fieldset-progress__input visually-hidden" id="item-one" type="checkbox"
+                    name="progress-one" checked>
                   <label class="fieldset-progress__label" for="item-one">Сделал селфи с акулой</label>
                 </li>
                 <li class="fieldset-progress__item fieldset-progress__item--four">
-                  <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-two"
-                    type="checkbox" name="progress-two" checked>
+                  <input class="fieldset-progress__input visually-hidden" id="item-two" type="checkbox"
+                    name="progress-two" checked>
                   <label class="fieldset-progress__label" for="item-two">Обгорел на пляже</label>
                 </li>
                 <li class="fieldset-progress__item">
-                  <input class="fieldset-progress__input" id="item-three" type="checkbox" name="progress-three">
+                  <input class="fieldset-progress__input visually-hidden" id="item-three" type="checkbox"
+                    name="progress-three">
                   <label class="fieldset-progress__label" for="item-three">Видел Чака Норриса</label>
                 </li>
                 <li class="fieldset-progress__item fieldset-progress__item--five">
-                  <input class="fieldset-progress__input" id="item-four" type="checkbox" name="progress-four">
+                  <input class="fieldset-progress__input visually-hidden" id="item-four" type="checkbox"
+                    name="progress-four">
                   <label class="fieldset-progress__label" for="item-four">Накупил сувениров</label>
                 </li>
                 <li class="fieldset-progress__item">
-                  <input class="fieldset-progress__input fieldset-progress__input--checked" id="item-five"
-                    type="checkbox" name="progress-five" checked>
+                  <input class="fieldset-progress__input visually-hidden" id="item-five" type="checkbox"
+                    name="progress-five" checked>
                   <label class="fieldset-progress__label" for="item-five">Удержал башню</label>
                 </li>
                 <li class="fieldset-progress__item">
-                  <input class="fieldset-progress__input" id="item-six" type="checkbox" name="progress-six">
+                  <input class="fieldset-progress__input visually-hidden" id="item-six" type="checkbox"
+                    name="progress-six">
                   <label class="fieldset-progress__label" for="item-six">Разгромил отель</label>
                 </li>
               </ul>
@@ -114,12 +117,12 @@
           <fieldset class="main-form__contacts fieldset-contacts">
             <legend class="fieldset-contacts__title fieldset-contacts__title--hidden">Контактная информация</legend>
             <ul class="fieldset-contacts__list">
-              <li class="fieldset-contacts__item">
+              <li class="fieldset-contacts__item fieldset-contacts__item--icon-phone">
                 <label class="fieldset-contacts__label" for="user-phone">Номер телефона</label>
                 <input class="fieldset-contacts__input" id="user-phone" type="tel" name="phone"
                   placeholder="Номер, пожалуйста">
               </li>
-              <li class="fieldset-contacts__item">
+              <li class="fieldset-contacts__item fieldset-contacts__item--icon-email">
                 <label class="fieldset-contacts__label" for="user-email">Адрес почты</label>
                 <input class="fieldset-contacts__input" id="user-email" type="email" name="email"
                   placeholder="Введите почту *" required>
@@ -131,18 +134,18 @@
               <legend class="fieldset-applications__title">С каким приложением путешествовали?</legend>
               <ul class="fieldset-applications__list">
                 <li class="fieldset-applications__item">
-                  <input class="fieldset-applications__input fieldset-applications__input--checked" id="pink-for-ios"
-                    type="radio" name="item-radio" value="for-ios" checked>
+                  <input class="fieldset-applications__input visually-hidden" id="pink-for-ios" type="radio"
+                    name="item-radio" value="for-ios" checked>
                   <label class="fieldset-applications__label" for="pink-for-ios">Pink для iOS</label>
                 </li>
                 <li class="fieldset-applications__item fieldset-applications__item--center">
-                  <input class="fieldset-applications__input" id="pink-for-android" type="radio" name="item-radio"
-                    value="for-android">
+                  <input class="fieldset-applications__input visually-hidden" id="pink-for-android" type="radio"
+                    name="item-radio" value="for-android">
                   <label class="fieldset-applications__label" for="pink-for-android">Pink на Android</label>
                 </li>
                 <li class="fieldset-applications__item">
-                  <input class="fieldset-applications__input" id="windows" type="radio" name="item-radio"
-                    value="for-windows">
+                  <input class="fieldset-applications__input visually-hidden" id="windows" type="radio"
+                    name="item-radio" value="for-windows">
                   <label class="fieldset-applications__label" for="windows">Windows Phone</label>
                 </li>
               </ul>
@@ -228,7 +231,7 @@
   </footer>
   <section class="popup-tooltip">
     <div class="popup-tooltip__wrapper-text">
-      <h2 class="popup-tooltip__title">Что-то пошло не так!</h2>
+      <h2 class="popup-tooltip__title">Что-то пошло<br class="popup-tooltip__title-hidden"> не так!</h2>
       <p class="popup-tooltip__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     </div>
     <div class="popup-tooltip__wrapper-button">
@@ -240,7 +243,7 @@
       <h2 class="popup-preview__title">Ваша заявка отправлена</h2>
       <p class="popup-preview__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы
         рассмотрим
-        ее и оповестим вас.</p>
+        ее и<br class="popup-preview__text-hidden"> оповестим вас.</p>
     </div>
     <div class="popup-preview__wrapper-button">
       <button class="popup-preview__button button" type="button">Закрыть окно</button>

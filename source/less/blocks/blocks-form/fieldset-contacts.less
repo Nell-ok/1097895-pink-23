@@ -45,10 +45,47 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 31px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 20px;
+  }
+}
+
+.fieldset-contacts__item--icon-phone {
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 33px;
+      right: 2px;
+      width: 59px;
+      height: 59px;
+      background: url("../../../img/icon-phone.svg") no-repeat;
+
+      @media (min-width: @desktop-width) {
+        top: 22px;
+      }
+    }
+  }
+}
+
+.fieldset-contacts__item--icon-email {
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 33px;
+      right: 2px;
+      width: 59px;
+      height: 59px;
+      background: url("../../../img/icon-email.svg") no-repeat;
+
+      @media (min-width: @desktop-width) {
+        top: 22px;
+      }
+    }
   }
 }
 
@@ -67,7 +104,19 @@
 .fieldset-contacts__input {
   color: @basic-dark;
   font-size: 18px;
-  padding: 20px 10px 20px 20px;
+  padding: 20px 10px 19px 20px;
   border: 2px solid @basic-border;
   background-color: transparent;
+
+  &::placeholder {
+    color: @basic-dark;
+  }
+
+  &:hover {
+    border-color: @basic-black;
+  }
+
+  &:active {
+    border-color: @basic-pink;
+  }
 }
