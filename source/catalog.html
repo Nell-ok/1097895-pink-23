@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Каталог - Пинк</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -57,8 +61,15 @@
           ваших?</h2>
         <article class="photo-blog__item photo-blog__item--panorama post">
           <h3 class="visually-hidden">Панорамный пост</h3>
-          <a class="post__link" href="#"><img class="post__picture" src="img/photo_blog/mobile_photo_panorama.jpg"
-              width="320" height="137" alt="Мост в горах">
+          <a class="post__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo_blog/panorama/desktop-panorama.jpg 1x, img/photo_blog/panorama/desktop-panorama@2.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/photo_blog/panorama/tablet-panorama.jpg 1x, img/photo_blog/panorama/tablet-panorama@2.jpg 2x">
+              <img class="post__picture post__picture--panorama" src="img/photo_blog/panorama/mobile-panorama.jpg"
+                width="320" height="137" srcset="img/photo_blog/panorama/mobile-panorama@2.jpg 2x" alt="Мост в горах">
+            </picture>
           </a>
           <div class="post__container-panorama">
             <div class="post__wrapper post__wrapper--panorama">
@@ -79,8 +90,16 @@
         <div class="photo-blog__list">
           <article class="photo-blog__item post">
             <h3 class="visually-hidden">Пользовательский пост</h3>
-            <a class="post__link" href="#"><img class="post__picture" src="img/photo_blog/mobile_photo1.jpg" width="280"
-                height="180" alt="Съемка машины"></a>
+            <a class="post__link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo_blog/photo-1-desktop.jpg 1x, img/photo_blog/photo-1-desktop@2.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo_blog/photo-1-tablet.jpg 1x, img/photo_blog/photo-1-tablet@2.jpg 2x">
+                <img class="post__picture" src="img/photo_blog/photo-1-mobile.jpg"
+                  srcset="img/photo_blog/photo-1-mobile@2.jpg 2x" width="280" height="180" alt="Съемка машины">
+              </picture>
+            </a>
             <div class="post__wrapper">
               <p class="post__wrapper-author">
                 <b class="post__author">Левон</b><span class="post__note">(5 часов назад)</span>
@@ -94,8 +113,16 @@
           </article>
           <article class="photo-blog__item post">
             <h3 class="visually-hidden">Пользовательский пост</h3>
-            <a class="post__link" href="#"><img class="post__picture" src="img/photo_blog/mobile_photo2.jpg" width="280"
-                height="180" alt="Барабанная установка"></a>
+            <a class="post__link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo_blog/photo-2-desktop.jpg 1x, img/photo_blog/photo-2-desktop@2.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo_blog/photo-2-tablet.jpg 1x, img/photo_blog/photo-2-tablet@2.jpg 2x">
+                <img class="post__picture" src="img/photo_blog/photo-2-mobile.jpg"
+                  srcset="img/photo_blog/photo-2-mobile@2.jpg 2x" width="280" height="180" alt="Съемка машины">
+              </picture>
+            </a>
             <div class="post__wrapper">
               <p class="post__wrapper-author">
                 <b class="post__author">Антон</b><span class="post__note">(12 часов назад)</span>
@@ -109,8 +136,16 @@
           </article>
           <article class="photo-blog__item post">
             <h3 class="visually-hidden">Пользовательский пост</h3>
-            <a class="post__link" href="#"><img class="post__picture" src="img/photo_blog/mobile_photo3.jpg" width="280"
-                height="180" alt="Стеклянный потолок"></a>
+            <a class="post__link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo_blog/photo-3-desktop.jpg 1x, img/photo_blog/photo-3-desktop@2.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo_blog/photo-3-tablet.jpg 1x, img/photo_blog/photo-3-tablet@2.jpg 2x">
+                <img class="post__picture" src="img/photo_blog/photo-3-mobile.jpg"
+                  srcset="img/photo_blog/photo-3-mobile@2.jpg 2x" width="280" height="180" alt="Съемка машины">
+              </picture>
+            </a>
             <div class="post__wrapper">
               <p class="post__wrapper-author">
                 <b class="post__author">Борис</b><span class="post__note">(20 часов назад)</span>
@@ -124,8 +159,16 @@
           </article>
           <article class="photo-blog__item post">
             <h3 class="visually-hidden">Пользовательский пост</h3>
-            <a class="post__link" href="#"><img class="post__picture" src="img/photo_blog/mobile_photo4.jpg" width="280"
-                height="180" alt="Кубанская бахча"></a>
+            <a class="post__link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo_blog/photo-4-desktop.jpg 1x, img/photo_blog/photo-4-desktop@2.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo_blog/photo-4-tablet.jpg 1x, img/photo_blog/photo-4-tablet@2.jpg 2x">
+                <img class="post__picture" src="img/photo_blog/photo-4-mobile.jpg"
+                  srcset="img/photo_blog/photo-4-mobile@2.jpg 2x" width="280" height="180" alt="Съемка машины">
+              </picture>
+            </a>
             <div class="post__wrapper">
               <p class="post__wrapper-author">
                 <b class="post__author">Сергей</b><span class="post__note">(25 часов назад)</span>
@@ -139,8 +182,16 @@
           </article>
           <article class="photo-blog__item post">
             <h3 class="visually-hidden">Пользовательский пост</h3>
-            <a class="post__link" href="#"><img class="post__picture" src="img/photo_blog/mobile_photo5.jpg" width="280"
-                height="180" alt="Ноги"></a>
+            <a class="post__link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo_blog/photo-5-desktop.jpg 1x, img/photo_blog/photo-5-desktop@2.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo_blog/photo-5-tablet.jpg 1x, img/photo_blog/photo-5-tablet@2.jpg 2x">
+                <img class="post__picture" src="img/photo_blog/photo-5-mobile.jpg"
+                  srcset="img/photo_blog/photo-5-mobile@2.jpg 2x" width="280" height="180" alt="Съемка машины">
+              </picture>
+            </a>
             <div class="post__wrapper">
               <p class="post__wrapper-author">
                 <b class="post__author">Максим</b><span class="post__note">(40 часов назад)</span>
@@ -154,8 +205,16 @@
           </article>
           <article class="photo-blog__item post">
             <h3 class="visually-hidden">Пользовательский пост</h3>
-            <a class="post__link" href="#"><img class="post__picture" src="img/photo_blog/mobile_photo6.jpg" width="280"
-                height="180" alt="Крыло самолета"></a>
+            <a class="post__link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo_blog/photo-6-desktop.jpg 1x, img/photo_blog/photo-6-desktop@2.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo_blog/photo-6-tablet.jpg 1x, img/photo_blog/photo-6-tablet@2.jpg 2x">
+                <img class="post__picture" src="img/photo_blog/photo-6-mobile.jpg"
+                  srcset="img/photo_blog/photo-6-mobile@2.jpg 2x" width="280" height="180" alt="Съемка машины">
+              </picture>
+            </a>
             <div class="post__wrapper">
               <p class="post__wrapper-author">
                 <b class="post__author">Надежда</b><span class="post__note">(45 часов назад)</span>
@@ -177,8 +236,8 @@
         <form class="catalog-form__form form-range" method="GET" action="https://echo.htmlacademy.ru">
           <fieldset class="form-range__picture">
             <legend class="visually-hidden">Картинка</legend>
-            <img class="form-range__picture-img" src="img/photo_blog/mobile_photo_form.jpg" width="280" height="374"
-              alt="Зима">
+            <img class="form-range__picture-img" src="img/photo_blog/form/mobile_photo_form.jpg"
+              srcset="img/photo_blog/form/mobile_photo_form@2.jpg 2x" width="280" height="374" alt="Зима">
           </fieldset>
           <fieldset class="form-range__filter">
             <legend class="visually-hidden">Настройки фото</legend>

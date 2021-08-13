@@ -26,12 +26,60 @@
   }
 }
 
+.photo-blog__item--panorama {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 140px;
+    height: 36px;
+    background-color: @basic-pink;
+  }
+
+  &::after {
+    content: "ПАНОРАМА ДНЯ";
+    position: absolute;
+    top: 6px;
+    right: 40px;
+    color: @basic-white;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      top: 57px;
+    }
+
+    &::after {
+      top: 63px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      top: 54px;
+      right: 130px;
+    }
+
+    &::after {
+      top: 60px;
+      right: 150px;
+    }
+  }
+}
+
 .photo-blog__list {
   padding: 20px 20px 0;
   display: grid;
   gap: 20px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 50px;
     grid-template-columns: repeat(2, 1fr);
   }
 

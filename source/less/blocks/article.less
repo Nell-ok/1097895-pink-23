@@ -15,7 +15,7 @@
 .article__wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
-    padding: 54px 20px 50px;
+    padding: 60px 20px 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,9 +36,16 @@
 
 .article__list {
   @media (min-width: @tablet-width) {
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 49px;
+    gap: 27px;
   }
 }
 
@@ -65,13 +72,18 @@
   @media (min-width: @tablet-width) {
     line-height: 24px;
     margin: 0;
-    padding: 13px 0;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
-    padding: 22px 0 31px;
+  }
+}
+
+.article-description__hidden {
+  @media (max-width: @desktop-width-only) {
+    display: none;
   }
 }
 

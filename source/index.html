@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -84,22 +88,37 @@
       <div class="features__list-wrapper">
         <ul class="features__list">
           <li class="features__item features__item--uplifting">
-            <img class="features__picture features__picture--uplifting" src="img/iphone/iphone_left.png" width="186"
-              height="382" alt="Телефон с серым экраном">
+            <div class="features__picture-wrapper features__picture-wrapper--hidden">
+              <img class="features__picture" src="img/iphone/iphone_left.png" srcset="img/iphone/iphone_left@2x.png 2x"
+                width="300" height="382" alt="Телефон с серым экраном">
+            </div>
             <h3 class="features__title">Поднимает<br class="features-title__hidden"> настроение</h3>
-            <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+            <p class="features__description">Приложение позволит вам победить осеннюю хандру<br
+                class="features-description__hidden"> и депрессию буквально в
               несколько кликов!</p>
           </li>
           <li class="features__item features__item--decorate">
-            <img class="features__picture features__picture--decorate" src="img/iphone/iphone_center.png" width="186"
-              height="382" alt="Телефон с розовым экраном">
+            <div class="features__picture-wrapper features__picture-wrapper--hidden">
+              <img class="features__picture" src="img/iphone/iphone_center.png"
+                srcset="img/iphone/iphone_center@2x.png 2x" width="300" height="382" alt="Телефон с розовым экраном">
+            </div>
             <h3 class="features__title">Меняет мир<br class="features-title__hidden"> вокруг</h3>
-            <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+            <p class="features__description">Сделайте снимок и<br class="features-description__hidden"> украсьте его
+              смайликом или текстовой подписью, чтобы<br class="features-description__hidden-last">
               усилить эффект</p>
           </li>
           <li class="features__item features__item--communion">
-            <img class="features__picture features__picture--communion" src="img/iphone/iphone_mobile.png" width="157"
-              height="320" alt="Телефон с розовым экраном и смайликом">
+            <div class="features__picture-wrapper">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/iphone/iphone_right.png 1x, img/iphone/iphone_right@2x.png 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/iphone/iphone_tablet.png 1x, img/iphone/iphone_tablet@2x.png 2x">
+                <img class="features__picture features__picture--communion" src="img/iphone/iphone_mobile.png"
+                  width="157" height="320" srcset="img/iphone/iphone_mobile@2x.png"
+                  alt="Телефон с розовым экраном и смайликом">
+              </picture>
+            </div>
             <h3 class="features__title">Заводит<br class="features-title__hidden"> новых друзей</h3>
             <p class="features__description features__description--last">Ставьте лайки, комментируйте, делитесь
               фотографиями с друзьями и заводите
@@ -113,7 +132,8 @@
         <img class="article__picture" src="img/time.svg" width="238" height="276" alt="Иконка-время">
         <div class="article__list article__list--icon">
           <h2 class="article__title">Эффект<br class="article-title__hidden"> на 24 часа!</h2>
-          <p class="article__description">Британские ученые провели исследования и доказали,
+          <p class="article__description">Британские ученые провели исследования и доказали,<br
+              class="article-description__hidden">
             что положительный эффект от использования приложения длится целые сутки!</p>
           <a class="article__link" href="#">Узнать больше об исследовании</a>
         </div>
@@ -158,7 +178,7 @@
               </th>
             </tr>
             <tr class="table__row">
-              <td class="table__cell table__cell--hidden">Розовый фильтр</td>
+              <td class="table__cell table__cell--hidden table__cell--radius-one">Розовый фильтр</td>
               <td class="table__cell">
                 <span class="table__option-name">Розовый фильтр</span>
                 <span class="table__icon table__icon--yes"></span>
@@ -167,7 +187,7 @@
                 <span class="table__option-name">Розовый фильтр</span>
                 <span class="table__icon table__icon--yes"></span>
               </td>
-              <td class="table__cell">
+              <td class="table__cell table__cell--radius-two">
                 <span class="table__option-name">Розовый фильтр</span>
                 <span class="table__icon table__icon--yes"></span>
               </td>
@@ -188,7 +208,7 @@
               </td>
             </tr>
             <tr class="table__row">
-              <td class="table__cell table__cell--hidden">Комментарии</td>
+              <td class="table__cell table__cell--hidden table__cell--radius-three">Комментарии</td>
               <td class="table__cell">
                 <span class="table__option-name">Комментарии</span>
                 <span class="table__icon table__icon--no"></span>
@@ -197,7 +217,7 @@
                 <span class="table__option-name">Комментарии</span>
                 <span class="table__icon table__icon--no"></span>
               </td>
-              <td class="table__cell">
+              <td class="table__cell table__cell--radius-four">
                 <span class="table__option-name">Комментарии</span>
                 <span class="table__icon table__icon--yes"></span>
               </td>
