@@ -122,6 +122,7 @@
 .contacts__map {
   min-height: 200px;
   background: url("../../img/map/map-mobile.png") no-repeat center;
+  background-size: cover;
   position: relative;
 
   &::before {
@@ -148,12 +149,12 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/map/map-mobile@2x.png");
-    background-size: 320px auto;
   }
 
   @media (min-width: @tablet-width) {
     min-height: 374px;
     background: url("../../img/map/map-tablet.png") no-repeat center;
+    background-size: cover;
 
     &::before {
       bottom: 144px;
@@ -167,13 +168,13 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/map/map-tablet@2x.png");
-      background-size: 660px auto;
     }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 502px;
     background: url("../../img/map/map-desktop.png") no-repeat center;
+    background-size: cover;
 
     &::before {
       bottom: 202px;
@@ -187,7 +188,6 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/map/map-desktop@2x.png");
-      background-size: 1200px auto;
     }
   }
 }
@@ -196,6 +196,6 @@
   position: absolute;
   width: 100%;
   height: auto;
-  top: 0;
+  top: -2px;
   left: 0;
 }

@@ -2,35 +2,38 @@
   color: @basic-white;
   text-align: center;
   font-weight: 300;
-  background: url("../../img/background/hand-mobile.png") no-repeat center top 39%, url("../../img/background/background-mobile.png") no-repeat center top;
+  background: url("../../img/background/hand-mobile.png") no-repeat center top 39%, url("../../img/background/background-mobile.png") no-repeat center bottom 274px;
+  background-size: auto, 100%;
   background-color: @background-dark;
   padding: 90px 20px 31px 20px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/background/hand-mobile@2x.png"), url("../../img/background/background-mobile@2x.png");
-    background-size: 320px auto;
+    background-size: 320px, 100%;
   }
 
   @media (min-width: @tablet-width) {
     padding-top: 204px;
     padding-bottom: 113px;
     background: url("../../img/background/hand-tablet.png") no-repeat center bottom, url("../../img/background/background-tablet.png") no-repeat center top;
+    background-size: auto, cover;
     background-color: @background-dark;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/background/hand-tablet@2x.png"), url("../../img/background/background-tablet@2x.png");
-      background-size: 660px auto;
+      background-size: 660px, 100%;
     }
   }
 
   @media (min-width: @desktop-width) {
     padding: 114px 130px 130px;
     background: url("../../img/background/hand-desktop.png") no-repeat right bottom, url("../../img/background/background-desktop.png") no-repeat center bottom;
+    background-size: auto, cover;
     background-color: @background-dark;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/background/hand-desktop@2x.png"), url("../../img/background/background-desktop@2x.png");
-      background-size: 1050px auto, 1200px auto;
+      background-size: 1050px, 100%;
     }
   }
 }
