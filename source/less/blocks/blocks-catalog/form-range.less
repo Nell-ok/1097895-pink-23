@@ -27,6 +27,13 @@
 
 .form-range__picture-img {
   display: block;
+  width: 280px;
+  height: 374px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 400px;
+  }
 }
 
 .form-range__filter {
@@ -171,8 +178,6 @@
     display: none;
   }
 }
-
-// Стили по умолчанию
 
 .form-range__range {
   appearance: none;

@@ -1,15 +1,37 @@
 .page-title {
   color: @basic-white;
   text-align: center;
-  background: url("../../img/background/background-mobile.jpg") no-repeat center;
+  background: url("../../../img/background/background-mobile.png") no-repeat center top;
+  background-size: cover;
   background-color: @background-dark;
   padding: 0 20px 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../../img/background/background-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background: url("../../../img/background/background-tablet.png") no-repeat center top;
+    background-size: cover;
+    background-color: @background-dark;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/background/background-tablet@2x.png");
+    }
+  }
+
   @media (min-width: @desktop-width) {
     padding: 0 130px 0;
+    background: url("../../../img/background/background-desktop.png") no-repeat center top;
+    background-size: cover;
+    background-color: @background-dark;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/background/background-desktop@2x.png");
+    }
   }
 }
 

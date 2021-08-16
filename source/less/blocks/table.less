@@ -1,6 +1,7 @@
 .table {
   text-align: left;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .table__row-title {
@@ -22,14 +23,22 @@
 
 .table__cell-title {
   background-color: @basic-dark;
-  padding: 10px 10px 30px;
+  padding: 10px 10px 26px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 11px;
+    padding-bottom: 7px;
+
+    &:nth-of-type(2) {
+      border-radius: 2px 0 0 0;
+    }
+
+    &:last-of-type {
+      border-radius: 0 2px 0 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 15px 10px 16px;
+    padding: 16px 10px 18px;
   }
 }
 
@@ -52,15 +61,15 @@
 }
 
 .table__cell-title--special {
-  border-left: 2px solid @basic-gray;
-  border-right: 2px solid @basic-gray;
+  border-left: 1px solid @basic-gray;
+  border-right: 1px solid @basic-gray;
   position: relative;
 
   &::after {
     content: "хит";
     position: absolute;
-    top: 14px;
-    left: 14px;
+    top: 13px;
+    left: 15px;
     color: @basic-white;
     font-size: 14px;
     font-weight: 400;
@@ -69,8 +78,8 @@
     transform: rotate(-45deg);
 
     @media (min-width: @tablet-width) {
-      top: 7px;
-      left: 8px;
+      top: 8px;
+      left: 6px;
     }
 
     @media (min-width: @desktop-width) {
@@ -82,29 +91,29 @@
   &::before {
     content: "";
     position: absolute;
-    top: -60px;
-    left: -60px;
-    width: 62px;
+    top: -57px;
+    left: -56px;
+    width: 58px;
     height: 63px;
-    border-width: 26px;
+    border-width: 24px;
     border-style: solid;
     border-color: transparent transparent @basic-pink;
     transform: rotate(-45deg);
 
     @media (min-width: @tablet-width) {
-      top: -45px;
-      left: -43px;
-      width: 44px;
+      top: -42px;
+      left: -40px;
+      width: 40px;
       height: 44px;
-      border-width: 21px;
+      border-width: 19px;
     }
 
     @media (min-width: @desktop-width) {
-      top: -59px;
-      left: -55px;
-      width: 56px;
+      top: -56px;
+      left: -53px;
+      width: 55px;
       height: 60px;
-      border-width: 26px;
+      border-width: 24px;
     }
   }
 }
@@ -122,18 +131,18 @@
 }
 
 .table__cell {
-  border: 2px solid @basic-border;
-  padding: 19px 0 19px 20px;
+  border: 1px solid @basic-border;
+  padding: 13px 0 14px 20px;
   min-width: 256px;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 14px 0 12px 15px;
+    padding: 8px 0 7px 15px;
     min-width: 133px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 18px 0 18px 22px;
+    padding: 13px 0 14px 22px;
     min-width: 207px;
   }
 }
@@ -150,10 +159,34 @@
   }
 }
 
+.table__cell--radius-one {
+  @media (min-width: @tablet-width) {
+    border-radius: 2px 0 0 0;
+  }
+}
+
+.table__cell--radius-two {
+  @media (min-width: @tablet-width) {
+    border-radius: 0 2px 0 0;
+  }
+}
+
+.table__cell--radius-three {
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 0 2px;
+  }
+}
+
+.table__cell--radius-four {
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 2px 0;
+  }
+}
+
 .table__icon--yes {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 17px;
   right: 19px;
   width: 31px;
   height: 21px;
@@ -165,7 +198,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 20px;
+    top: 17px;
     right: 43%;
   }
 }
@@ -173,7 +206,7 @@
 .table__icon--no {
   content: "";
   position: absolute;
-  top: 17px;
+  top: 15px;
   right: 21px;
   width: 27px;
   height: 27px;
@@ -185,7 +218,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 17px;
+    top: 15px;
     right: 43%;
   }
 }
