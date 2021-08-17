@@ -1,5 +1,9 @@
 .logo__icon-picture {
   padding-right: 12px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .logo__icon-picture--hidden {
@@ -8,10 +12,16 @@
   }
 }
 
-.page-header__logo:hover path {
-  fill: @basic-pink;
+.logo__icon-text {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
-.page-header__logo:active path {
-  fill: fade(@basic-white, 30%);
+.logo__icon-all {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }

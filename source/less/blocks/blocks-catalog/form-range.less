@@ -115,47 +115,32 @@
   }
 }
 
-.form-range__icon--current path {
+.form-range__icon {
+  .form-range__icon-svg {
+    fill: fade(@basic-dark, 30%);
+
+    @media (min-width: @tablet-width) {
+      fill: @basic-pink;
+      width: 50%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+    }
+  }
+
+  &:hover .form-range__icon-svg {
+    fill: fade(@basic-dark, 50%);
+  }
+}
+
+.form-range__icon--current .form-range__icon-svg {
   fill: @basic-pink;
-}
-
-.form-range__icon--current g {
-  opacity: 1;
-}
-
-.form-range__icon:hover path {
-  fill: @basic-dark;
-}
-
-.form-range__icon:hover g {
-  opacity: 0.5;
-}
-
-.form-range__icon svg {
-  @media (min-width: @tablet-width) {
-    width: 50%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 100%;
-  }
 }
 
 .form-range__icon:not(:last-of-type) {
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
-  }
-}
-
-.form-range__icon path {
-  @media (min-width: @tablet-width) {
-    fill: @basic-pink;
-  }
-}
-
-.form-range__icon g {
-  @media (min-width: @tablet-width) {
-    opacity: 1;
   }
 }
 

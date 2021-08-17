@@ -25,11 +25,15 @@
 }
 
 .copyright__link {
-  &:hover path {
+  .copyright__icon {
+    fill: @basic-pink;
+  }
+
+  &:hover .copyright__icon {
     fill: @basic-dark;
   }
 
-  &:active path {
+  &:active .copyright__icon {
     fill: fade(@basic-dark, 30%);
   }
 }

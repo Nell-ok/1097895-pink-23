@@ -134,6 +134,7 @@
     height: 36px;
     background-color: @basic-white;
     border-radius: 50%;
+    z-index: 2;
   }
 
   &::after {
@@ -145,6 +146,7 @@
     height: 16px;
     background-color: @basic-pink;
     border-radius: 50%;
+    z-index: 3;
   }
 
   @media (min-resolution: 2dppx) {
@@ -190,6 +192,14 @@
       background-image: url("../../img/map/map-desktop@2x.png");
     }
   }
+}
+
+.contacts__map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .contacts__map-mask {
