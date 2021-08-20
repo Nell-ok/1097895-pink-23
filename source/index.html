@@ -41,7 +41,8 @@
             <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Html academy</a>
+            <a class="main-nav__link main-nav__link--logo" href="#"><span class="main-nav__link-uppercase">Html</span>
+              academy</a>
           </li>
         </ul>
       </nav>
@@ -52,7 +53,7 @@
     <section class="downloadblock">
       <div class="downloadblock__wrapper">
         <h2 class="visually-hidden">Где скачать мобильном приложении PINK?</h2>
-        <p class="downloadblock__text">Взгляните на жизнь<br>иначе!</p>
+        <p class="downloadblock__text">Взгляните<br class="downloadblock__text-hidden"> на жизнь<br>иначе!</p>
         <a class="downloadblock__button button-link" href="https://www.apple.com/ru/app-store/"
           aria-label="Кнопка">Скачать приложение</a>
         <ul class="downloadblock__list">
@@ -85,27 +86,27 @@
       </div>
       <div class="features__list-wrapper">
         <ul class="features__list">
-          <li class="features__item features__item--uplifting">
+          <li class="features__item">
             <div class="features__picture-wrapper features__picture-wrapper--hidden">
               <img class="features__picture" src="img/iphone/iphone_left.png" srcset="img/iphone/iphone_left@2x.png 2x"
                 width="300" height="382" alt="Телефон с серым экраном">
             </div>
-            <h3 class="features__title">Поднимает<br class="features-title__hidden"> настроение</h3>
+            <h3 class="features__title">Поднимает<br class="features__title-hidden"> настроение</h3>
             <p class="features__description">Приложение позволит вам победить осеннюю хандру<br
-                class="features-description__hidden"> и депрессию буквально в
+                class="features__description-hidden"> и депрессию буквально в
               несколько кликов!</p>
           </li>
-          <li class="features__item features__item--decorate">
+          <li class="features__item">
             <div class="features__picture-wrapper features__picture-wrapper--hidden">
               <img class="features__picture" src="img/iphone/iphone_center.png"
                 srcset="img/iphone/iphone_center@2x.png 2x" width="300" height="382" alt="Телефон с розовым экраном">
             </div>
-            <h3 class="features__title">Меняет мир<br class="features-title__hidden"> вокруг</h3>
-            <p class="features__description">Сделайте снимок и<br class="features-description__hidden"> украсьте его
-              смайликом или текстовой подписью, чтобы<br class="features-description__hidden-last">
+            <h3 class="features__title">Меняет мир<br class="features__title-hidden"> вокруг</h3>
+            <p class="features__description">Сделайте снимок и<br class="features__description-hidden"> украсьте его
+              смайликом или текстовой подписью, чтобы<br class="features__description-hidden-last">
               усилить эффект</p>
           </li>
-          <li class="features__item features__item--communion">
+          <li class="features__item">
             <div class="features__picture-wrapper">
               <picture>
                 <source media="(min-width: 1200px)"
@@ -117,7 +118,7 @@
                   alt="Телефон с розовым экраном и смайликом">
               </picture>
             </div>
-            <h3 class="features__title">Заводит<br class="features-title__hidden"> новых друзей</h3>
+            <h3 class="features__title">Заводит<br class="features__title-hidden"> новых друзей</h3>
             <p class="features__description features__description--last">Ставьте лайки, комментируйте, делитесь
               фотографиями с друзьями и заводите
               новых</p>
@@ -129,7 +130,7 @@
       <div class="article__wrapper">
         <img class="article__picture" src="img/time.svg" width="238" height="276" alt="Иконка-время">
         <div class="article__list article__list--icon">
-          <h2 class="article__title">Эффект<br class="article-title__hidden"> на 24 часа!</h2>
+          <h2 class="article__title">Эффект<br class="article__title-hidden"> на 24 часа!</h2>
           <p class="article__description">Британские ученые провели исследования и доказали,<br
               class="article-description__hidden">
             что положительный эффект от использования приложения длится целые сутки!</p>
@@ -309,11 +310,11 @@
     </div>
   </footer>
   <script>
-    let navMain = document.querySelector('.main-nav');
-    let navToggle = document.querySelector('.main-nav__toggle');
-    let pageHeader = document.querySelector('.page-header__wrapper');
+    const navMain = document.querySelector('.main-nav');
+    const navToggle = document.querySelector('.main-nav__toggle');
+    const pageHeader = document.querySelector('.page-header');
 
-    pageHeader.classList.remove('page-header__wrapper--closed');
+    pageHeader.classList.add('page-header--closed');
     navMain.classList.remove('main-nav--nojs');
     navMain.classList.add('main-nav--closed');
 
@@ -321,14 +322,15 @@
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
-        pageHeader.classList.remove('page-header__wrapper--closed');
+        pageHeader.classList.remove('page-header--closed');
       } else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
-        pageHeader.classList.add('page-header__wrapper--closed');
+        pageHeader.classList.add('page-header--closed');
       }
     });
   </script>
+
 </body>
 
 </html>

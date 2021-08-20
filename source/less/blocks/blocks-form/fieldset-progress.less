@@ -13,12 +13,18 @@
   text-transform: uppercase;
   text-align: center;
   position: relative;
-  top: 42px;
+  top: 38px;
 
   @media (min-width: @tablet-width) {
     position: static;
     line-height: 30px;
     padding: 0 31px;
+  }
+}
+
+.fieldset-progress__title-hidden {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -29,26 +35,32 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  gap: 52px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 60px;
+    padding-left: 58px;
+    gap: 52px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 49px;
-    column-gap: 6%;
+    row-gap: 52px;
+    column-gap: 0;
     margin-left: 60px;
   }
 }
 
 .fieldset-progress__item:not(:first-of-type) {
-  padding-top: 59px;
-
   @media (min-width: @desktop-width) {
-    padding: 0;
+    padding-left: 23px;
+  }
+}
+
+.fieldset-progress__item:nth-of-type(2) {
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
   }
 }
 
@@ -68,7 +80,7 @@
 
 .fieldset-progress__label {
   font-size: 18px;
-  padding-left: 57px;
+  padding-left: 59px;
   position: relative;
   display: block;
   cursor: pointer;
@@ -79,7 +91,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -4px;
     left: 0;
     width: 35px;
     height: 35px;
@@ -93,7 +105,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 11px;
+    top: 7px;
     left: 9px;
     width: 22px;
     height: 16px;

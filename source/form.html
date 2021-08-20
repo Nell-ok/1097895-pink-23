@@ -41,7 +41,8 @@
             <a class="main-nav__link main-nav__link--active" href="form.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Html academy</a>
+            <a class="main-nav__link main-nav__link--logo" href="#"><span class="main-nav__link-uppercase">Html</span>
+              academy</a>
           </li>
         </ul>
       </nav>
@@ -81,7 +82,8 @@
           </fieldset>
           <div class="main-form__progress-wrapper">
             <fieldset class="main-form__progress fieldset-progress">
-              <legend class="fieldset-progress__title">Ваши безбашенные достижения в путешествии</legend>
+              <legend class="fieldset-progress__title">Ваши безбашенные<br class="fieldset-progress__title-hidden">
+                достижения в путешествии</legend>
               <ul class="fieldset-progress__list">
                 <li class="fieldset-progress__item">
                   <input class="fieldset-progress__input visually-hidden" id="item-one" type="checkbox"
@@ -140,7 +142,7 @@
                     name="item-radio" value="for-ios" checked>
                   <label class="fieldset-applications__label" for="pink-for-ios">Pink для iOS</label>
                 </li>
-                <li class="fieldset-applications__item fieldset-applications__item--center">
+                <li class="fieldset-applications__item">
                   <input class="fieldset-applications__input visually-hidden" id="pink-for-android" type="radio"
                     name="item-radio" value="for-android">
                   <label class="fieldset-applications__label" for="pink-for-android">Pink на Android</label>
@@ -156,7 +158,7 @@
           <fieldset class="main-form__desc fieldset-desc">
             <legend class="fieldset-desc__title">Опишите свои эмоции</legend>
             <label class="visually-hidden" for="big-text">Отзыв о путешествии с приложением PINK</label>
-            <textarea class="fieldset-desc__text" id="big-text" name="text" rows="6"
+            <textarea class="fieldset-desc__text" id="big-text" name="text" rows="2"
               placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="main-form__button-wrapper">
@@ -239,6 +241,27 @@
       <button class="popup-preview__button button" type="button">Закрыть окно</button>
     </div>
   </section>
+  <script>
+    const navMain = document.querySelector('.main-nav');
+    const navToggle = document.querySelector('.main-nav__toggle');
+    const pageHeader = document.querySelector('.page-header');
+
+    pageHeader.classList.add('page-header--closed');
+    navMain.classList.remove('main-nav--nojs');
+    navMain.classList.add('main-nav--closed');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+        pageHeader.classList.remove('page-header--closed');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+        pageHeader.classList.add('page-header--closed');
+      }
+    });
+  </script>
 
 </body>
 

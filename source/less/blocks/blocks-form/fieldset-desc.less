@@ -12,7 +12,7 @@
   text-transform: uppercase;
   text-align: center;
   position: relative;
-  top: 35px;
+  top: 38px;
 
   @media (min-width: @tablet-width) {
     line-height: 30px;
@@ -25,9 +25,21 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
-  padding: 15px 10px 0 22px;
+  padding: 14px 10px 3px 20px;
   border: 2px solid @basic-border;
   background-color: transparent;
+  min-height: 180px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    padding-left: 18px;
+    min-height: 177px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 112px;
+    padding-top: 10px;
+  }
 
   &::placeholder {
     color: @basic-dark;

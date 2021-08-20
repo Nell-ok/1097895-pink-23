@@ -26,7 +26,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 114px 130px 130px;
+    padding: 209px 130px 123px;
     background: url("../../img/background/hand-desktop.png") no-repeat right bottom, url("../../img/background/background-desktop.png") no-repeat center bottom;
     background-size: auto, cover;
     background-color: @background-dark;
@@ -50,6 +50,8 @@
 
   @media (min-width: @desktop-width) {
     margin-right: 636px;
+    display: grid;
+    justify-items: center;
   }
 }
 
@@ -69,12 +71,20 @@
   }
 }
 
+.downloadblock__text-hidden {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
 .downloadblock__button {
   color: @basic-white;
   font-size: 18px;
   border: 3px solid @basic-white;
   background-color: transparent;
-  margin-top: 348px;
+  margin-top: 345px;
   margin-bottom: 32px;
   width: 254px;
 
@@ -95,8 +105,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 51px;
-    margin-bottom: 67px;
+    margin-top: 37px;
+    margin-bottom: 71px;
     font-size: 21px;
   }
 }
@@ -108,7 +118,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 35px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .downloadblock__link {
@@ -131,6 +146,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 58px;
+    padding-top: 51px;
   }
 }

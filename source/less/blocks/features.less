@@ -9,7 +9,7 @@
   padding: 40px 20px 32px;
 
   @media (min-width: @tablet-width) {
-    padding: 46px 20px 8px;
+    padding: 48px 20px 28px;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,7 +19,7 @@
 
 .features__text {
   font-size: 24px;
-  line-height: 120%;
+  line-height: 121%;
   font-weight: 300;
   margin: 0;
 
@@ -43,11 +43,15 @@
 }
 
 .features__list-wrapper {
-  padding: 81px 20px 0;
+  padding: 80px 20px 0;
   background: url("../../img/bevels/vector-one.svg") no-repeat;
   background-size: 100% auto;
   background-position: 50% 0;
   background-color: @basic-gray;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 0 130px;
@@ -60,10 +64,13 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 31px;
 
   @media (min-width: @tablet-width) {
     position: relative;
-    padding: 98px 0 42px 310px;
+    padding: 78px 0 42px 310px;
+    gap: 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -90,18 +97,6 @@
     text-align: center;
     align-items: center;
     width: 300px;
-  }
-}
-
-.features__item--decorate {
-  padding: 31px 0;
-
-  @media (min-width: @tablet-width) {
-    padding: 34px 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
   }
 }
 
@@ -164,12 +159,12 @@
   @media (min-width: @desktop-width) {
     line-height: 30px;
     font-size: 30px;
-    padding-bottom: 29px;
-    padding-top: 50px;
+    padding-bottom: 23px;
+    padding-top: 56px;
   }
 }
 
-.features-title__hidden {
+.features__title-hidden {
   @media (max-width: @desktop-width-only) {
     display: none;
   }
@@ -186,7 +181,7 @@
   }
 }
 
-.features-description__hidden-last {
+.features__description-hidden-last {
   @media (max-width: @mobile-width-only) {
     display: none;
   }
@@ -196,7 +191,7 @@
   }
 }
 
-.features-description__hidden {
+.features__description-hidden {
   @media (max-width: @desktop-width-only) {
     display: none;
   }

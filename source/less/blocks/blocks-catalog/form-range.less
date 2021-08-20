@@ -7,6 +7,10 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 29px;
+  }
 }
 
 .form-range__picture {
@@ -56,7 +60,7 @@
 }
 
 .form-range__wrapper-range {
-  padding: 20px 20px 27px;
+  padding: 20px 20px 34px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -71,7 +75,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 60px;
+      top: 58px;
       right: 0;
       width: 275px;
       height: 1px;
@@ -81,7 +85,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 76px;
+      bottom: 69px;
       right: 0;
       width: 275px;
       height: 1px;
@@ -100,14 +104,14 @@
 
     &::after {
       width: 410px;
-      bottom: 59px;
+      bottom: 57px;
     }
   }
 }
 
 .form-range__icon-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 
   @media (min-width: @tablet-width) {
@@ -134,6 +138,18 @@
   }
 }
 
+.form-range__icon:last-of-type {
+  padding-right: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 6px;
+  }
+}
+
 .form-range__icon--current .form-range__icon-svg {
   fill: @basic-pink;
 }
@@ -145,7 +161,7 @@
 }
 
 .form-range__input-wrapper {
-  padding: 34px 20px 0;
+  padding: 30px 20px 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -175,8 +191,8 @@
     margin-left: 15px;
 
     &:nth-of-type(2) {
-      margin-top: 16px;
-      margin-bottom: 15px;
+      margin-top: 23px;
+      margin-bottom: 22px;
     }
   }
 
@@ -213,20 +229,23 @@
 }
 
 .form-range__wrapper-button {
-  padding: 38px 20px 41px;
+  padding: 39px 20px 41px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   border-top: 1px solid fade(@basic-dark, 10%);
+  gap: 12px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     border-top: none;
+    gap: 25px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    gap: 44px;
   }
 }
 
@@ -260,7 +279,6 @@
 }
 
 .form-range__button--cancel {
-  margin-top: 12px;
   color: @basic-dark;
   border: 3px solid @basic-dark;
   opacity: 0.1;
@@ -274,14 +292,5 @@
     background-color: fade(@basic-dark, 30%);
     border-color: fade(@basic-dark, 30%);
     color: fade(@basic-white, 30%);
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-top: 24px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 0;
-    margin-left: 44px;
   }
 }
