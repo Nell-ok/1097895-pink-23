@@ -10,6 +10,15 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    gap: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+    gap: 52px;
+  }
 }
 
 .fieldset-user__item {
@@ -22,25 +31,13 @@
     grid-template-columns: min-content 1fr;
     gap: 20px;
     align-items: center;
-    padding-top: 56px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 51px;
-  }
-}
-
-.fieldset-user__item:first-of-type {
-  @media (min-width: @desktop-width) {
-    padding-top: 21px;
   }
 }
 
 .fieldset-user__label {
   color: @basic-pink;
   text-transform: uppercase;
-  padding-left: 23px;
-  padding-top: 26px;
+  padding: 17px 0 4px 23px;
 
   @media (min-width: @tablet-width) {
     padding: 0;

@@ -20,11 +20,15 @@
 }
 
 .social__link {
-  &:hover circle {
-    opacity: 1;
+  .social__icon {
+    color: fade(@basic-dark, 10%);
   }
 
-  &:active path {
+  &:hover .social__icon {
+    color: @basic-dark;
+  }
+
+  &:active .social__icon {
     fill-opacity: 0.3;
   }
 }

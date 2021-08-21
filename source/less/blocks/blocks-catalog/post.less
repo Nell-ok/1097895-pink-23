@@ -53,10 +53,15 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    min-height: 155px;
+    min-height: 107px;
     padding: 24px 30px;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 106px;
+    padding: 24px 27px;
   }
 }
 
@@ -123,6 +128,10 @@
 
   @media (min-width: @tablet-width) {
     order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 11px;
   }
 }
 

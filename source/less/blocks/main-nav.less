@@ -18,6 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 78px;
   }
 }
 
@@ -34,24 +35,11 @@
   @media (min-width: @desktop-width) {
     border: none;
     box-shadow: none;
+    padding-top: 2px;
+    padding-bottom: 0;
 
     &:last-of-type {
       border: none;
-    }
-  }
-}
-
-.main-nav__link--active {
-  @media (min-width: @desktop-width) {
-    padding-bottom: 11px;
-    border-bottom: 2px solid @basic-white;
-
-    &:hover {
-      border-color: @basic-pink;
-    }
-
-    &:active {
-      border-color: fade(@basic-white, 30%);
     }
   }
 }
@@ -62,6 +50,7 @@
   line-height: 32px;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 0 10px;
 
   &:hover {
     color: @basic-pink;
@@ -75,10 +64,38 @@
     line-height: 18px;
     font-weight: 400;
     text-transform: none;
+    padding: 0;
 
     &:active {
       color: fade(@basic-white, 30%);
     }
+  }
+}
+
+.main-nav__link--active {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @basic-white;
+    padding-bottom: 8px;
+
+    &:hover {
+      border-color: @basic-pink;
+    }
+
+    &:active {
+      border-color: fade(@basic-white, 30%);
+    }
+  }
+}
+
+.main-nav__link--logo {
+  @media (min-width: @desktop-width) {
+    text-transform: capitalize;
+  }
+}
+
+.main-nav__link-uppercase {
+  @media (min-width: @desktop-width) {
+    text-transform: uppercase;
   }
 }
 
@@ -132,8 +149,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 0;
+    top: 12px;
+    right: -4px;
     width: 30px;
     height: 4px;
     background-color: @basic-white;
