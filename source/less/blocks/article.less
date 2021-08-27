@@ -19,7 +19,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 54px 20px;
+    padding: 54px 22px 54px 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -87,6 +87,12 @@
 
 .article-description__hidden {
   @media (max-width: @desktop-width-only) {
+    display: none;
+  }
+}
+
+.article-description__hidden-first {
+  @media (min-width: @desktop-width) {
     display: none;
   }
 }

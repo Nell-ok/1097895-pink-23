@@ -1,8 +1,10 @@
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 const pageHeader = document.querySelector('.page-header');
+const pageMain = document.querySelector('.page-main');
 
 pageHeader.classList.add('page-header--closed');
+pageMain.classList.add('page-main--js');
 navMain.classList.remove('main-nav--nojs');
 navMain.classList.add('main-nav--closed');
 
