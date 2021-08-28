@@ -101,3 +101,19 @@
     border-color: @basic-pink;
   }
 }
+
+.fieldset-applications__input:focus + .fieldset-applications__label {
+  &::before {
+    border-color: fade(@basic-dark, 30%);
+  }
+}
+
+.fieldset-applications__input:disabled + .fieldset-applications__label {
+  &::before {
+    border-color: fade(@basic-dark, 10%);
+  }
+
+  &::after {
+    opacity: 0.1;
+  }
+}

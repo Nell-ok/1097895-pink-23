@@ -126,3 +126,19 @@
     border-color: @basic-pink;
   }
 }
+
+.fieldset-progress__input:focus + .fieldset-progress__label {
+  &::before {
+    border-color: fade(@basic-dark, 30%);
+  }
+}
+
+.fieldset-progress__input:disabled + .fieldset-progress__label {
+  &::before {
+    border-color: fade(@basic-dark, 10%);
+  }
+
+  &::after {
+    opacity: 0.1;
+  }
+}
